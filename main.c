@@ -5,18 +5,19 @@
 
 int main(int argc, char *argv[]) 
 {
+	int i, average;
+	int sum;
 	int grade[5];
-	int i;
 	
-	grade[0]=10;
-	grade[1]=20;
-	grade[2]=30;
-	grade[3]=40;
-	grade[4]=50;
-	
+	sum=0;
 	for (i=0; i<5; i++)
-	 printf("student %i's grade : %i\n", i, grade[i]);
-
-
+	{
+		printf("학생 성적을 입력하세요 : ");
+		scanf("%d", &grade[i]);
+		sum+=grade[i];
+	 
+	}
+	average=sum/5;
+	printf("성적 평균 : %d\n", average);
 	return 0;
 }
